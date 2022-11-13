@@ -1,0 +1,39 @@
+﻿
+@model IEnumerable<MVC_Sample.Models.Book>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetBooks</title>
+</head>
+<body>
+    <div>
+        <table>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => item.Author)
+                </td>
+            </tr>
+            }
+        </table>
+    </div>
+    <div>
+  //  @Html.DropDownList(x=)
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿@model MVC_Sample.ViewModel.CustomerBookViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetBookName</title>
+</head>
+<body>
+    <div>
+        <table>
+
+            @foreach (var item in Model.Books)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => item.Id);
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Name);
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => item.Author);
+                    </td>
+                </tr>
+            }
+
+            @foreach (var item in Model.Customers)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => item.Id);
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Name);
+                    </td>
+                   
+                </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>
